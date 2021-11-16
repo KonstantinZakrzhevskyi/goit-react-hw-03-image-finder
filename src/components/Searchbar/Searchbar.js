@@ -1,4 +1,5 @@
 import { Component } from 'react';
+import { toast } from 'react-toastify';
 
 class Searchbar extends Component {
   state = {
@@ -13,7 +14,8 @@ class Searchbar extends Component {
     e.preventDefault();
 
     if (this.state.query.trim() === '') {
-      alert('введите запрос');
+      // alert('введите запрос');
+      toast.error('введите запрос!');
       return;
     }
 
@@ -36,6 +38,7 @@ class Searchbar extends Component {
             autoComplete="off"
             autoFocus
             placeholder="Search images and photos"
+            value={this.state.query}
             onChange={this.handleNameCange}
           />
         </form>
