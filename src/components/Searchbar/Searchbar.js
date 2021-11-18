@@ -1,7 +1,12 @@
 import { Component } from 'react';
+import PropTypes from 'prop-types';
 import { toast } from 'react-toastify';
 
 class Searchbar extends Component {
+  static propTypes = {
+    onSubmit: PropTypes.func.isRequired,
+  };
+
   state = {
     query: '',
   };
@@ -11,16 +16,20 @@ class Searchbar extends Component {
   };
 
   handleSubmit = e => {
+    const { query } = this.state;
+
     e.preventDefault();
 
-    if (this.state.query.trim() === '') {
-      // alert('введите запрос');
-      toast.error('введите запрос!');
+    if (query.trim() === '') {
+      toast.error('Enter request!');
       return;
     }
 
-    this.props.onSubmit(this.state.query);
+    this.props.onSubmit(query);
+    this.reset();
+  };
 
+  reset = () => {
     this.setState({ query: '' });
   };
 

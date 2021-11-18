@@ -1,3 +1,9 @@
-<button type="button" className="button">
-  Load more
-</button>;
+function Button({ onClick }) {
+  return (
+    <button type="button" className="button" onClick={onClick}>
+      Load more
+    </button>
+  );
+}
+
+export default Button;
