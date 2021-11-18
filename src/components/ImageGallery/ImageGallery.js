@@ -56,7 +56,7 @@ class ImageGallery extends Component {
     }
 
     if (status === Status.RESOLVED) {
-      return <ImagesDataView image={images} />;
+      return <ImagesDataView images={images} />;
     }
   }
 }

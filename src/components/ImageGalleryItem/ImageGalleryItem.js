@@ -6,16 +6,16 @@ const ImageGalleryItem = ({
   webformatURL,
   largeImageURL,
   tags,
-  onClick,
+  // onClick,
 }) => {
   return (
     <li key={id} className="imageGalleryItem">
       <img
         className="imageGalleryItem-image"
         src={webformatURL}
-        datascr={largeImageURL}
+        datasrc={largeImageURL}
         alt={tags}
-        onClick={onClick}
+        // onClick={onClick}
       />
     </li>
   );
@@ -23,7 +23,7 @@ const ImageGalleryItem = ({
 
 ImageGalleryItem.propTypes = {
   webformatURL: PropTypes.string.isRequired,
-  datascr: PropTypes.string.isRequired,
+  largeImageURL: PropTypes.string.isRequired,
   tags: PropTypes.string.isRequired,
   id: PropTypes.number.isRequired,
   onClick: PropTypes.func.isRequired,

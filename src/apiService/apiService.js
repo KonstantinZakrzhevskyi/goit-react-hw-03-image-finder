@@ -6,10 +6,10 @@ const URL = {
   PER_PAGE: 12,
 };
 
-export default async function fetchGallery(query, page) {
+export default function fetchGallery(query, page) {
   const url = `${URL.BASE_URL}/?q=${query}&page=${page}&key=${URL.API_KEY}&image_type=${URL.IMAGE_TYPE}&orientation=${URL.ORIENTATION}&per_page=${URL.PER_PAGE}`;
 
-  const response = await fetch(url);
-  const parseResponse = await response.json();
-  return parseResponse.hits;
+  return fetch(url)
+    .then(data => (data.status !== 200 ? Promise.reject() : data.json()))
+    .catch(err => console.error);
 }
