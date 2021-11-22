@@ -1,6 +1,7 @@
+import s from './Button.module.css';
 function Button({ onClick }) {
   return (
-    <button type="button" className="button" onClick={onClick}>
+    <button className={s.button} type="button" onClick={onClick} id="btn">
       Load more
     </button>
   );
