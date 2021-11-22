@@ -68,21 +68,21 @@ class ImageGallery extends Component {
       .catch(error => this.state({ status: Status.REJECTED }));
   };
 
-  // toggleModal = (datasrc, alt) => {
-  //   this.setState(({ showModal }) => ({
-  //     showModal: !showModal,
-  //     largeImageURL: datasrc,
-  //     alt,
-  //   }));
-  // };
-
   toggleModal = (datasrc, alt) => {
-    this.setState(state => ({
-      showModal: !state.showModal,
+    this.setState(({ showModal }) => ({
+      showModal: !showModal,
       largeImageURL: datasrc,
       alt,
     }));
   };
+
+  // toggleModal = (datasrc, alt) => {
+  //   this.setState(state => ({
+  //     showModal: !state.showModal,
+  //     largeImageURL: datasrc,
+  //     alt,
+  //   }));
+  // };
 
   onGalleryCardClick = e => {
     const url = e.target.getAttribute('datasrc');
