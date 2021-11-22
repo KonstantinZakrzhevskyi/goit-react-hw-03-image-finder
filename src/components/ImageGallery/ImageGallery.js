@@ -88,7 +88,6 @@ class ImageGallery extends Component {
     const url = e.target.getAttribute('datasrc');
     const alt = e.target.getAttribute('alt');
     this.toggleModal(url, alt);
-    console.log(url);
   };
 
   render() {
