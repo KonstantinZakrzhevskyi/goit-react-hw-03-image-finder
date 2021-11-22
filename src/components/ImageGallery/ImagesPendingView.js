@@ -1,13 +1,14 @@
 import Loader from 'react-loader-spinner';
+import s from './ImageGallery.module.css';
 
 function ImagesPendingView() {
   return (
-    <div className="loader">
+    <div className={s.loader}>
       <Loader
         type="Rings"
         color="00BFFF"
-        height={150}
-        width={150}
+        height={250}
+        width={250}
         timeout={3000}
       />
     </div>
