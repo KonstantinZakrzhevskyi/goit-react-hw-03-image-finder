@@ -33,6 +33,23 @@ img {
   height: auto;
 }
 
+h1,
+h2,
+p {
+  margin-top: 0;
+  margin-bottom: 0;
+}
+
+ul {
+  padding-left: 0;
+  margin: 0;
+}
+
+a {
+  text-decoration: none;
+  color: currentColor;
+}
+
 /*
  * Стили компонента App
  */
@@ -46,7 +63,7 @@ img {
 /*
  * Стили компонента Searchbar
  */
-.searchbar {
+/* .searchbar {
   top: 0;
   left: 0;
   position: sticky;
@@ -63,12 +80,12 @@ img {
   background-color: #3f51b5;
   box-shadow: 0px 2px 4px -1px rgba(0, 0, 0, 0.2),
     0px 4px 5px 0px rgba(0, 0, 0, 0.14), 0px 1px 10px 0px rgba(0, 0, 0, 0.12);
-}
+} */
 
 /*
  * Стили компонента SearchForm
  */
-.searchForm {
+/* .searchForm {
   display: flex;
   align-items: center;
   width: 100%;
@@ -123,12 +140,12 @@ img {
 .searchForm-input::placeholder {
   font: inherit;
   font-size: 18px;
-}
+} */
 
 /*
  * Стили компонента ImageGallery
  */
-.imageGallery {
+/* .imageGallery {
   display: grid;
   max-width: calc(100vw - 48px);
   grid-template-columns: repeat(auto-fill, minmax(320px, 1fr));
@@ -139,12 +156,12 @@ img {
   list-style: none;
   margin-left: auto;
   margin-right: auto;
-}
+} */
 
 /*
  * Стили компонента ImageGalleryItem
  */
-.imageGalleryItem {
+/* .imageGalleryItem {
   border-radius: 2px;
   box-shadow: 0px 1px 3px 0px rgba(0, 0, 0, 0.2),
     0px 1px 1px 0px rgba(0, 0, 0, 0.14), 0px 2px 1px -1px rgba(0, 0, 0, 0.12);
@@ -160,13 +177,13 @@ img {
 .imageGalleryItem-image:hover {
   transform: scale(1.03);
   cursor: zoom-in;
-}
+} */
 
 /*
  * Стили компонента Modal
  */
 
-.overlay {
+/* .overlay {
   position: fixed;
   top: 0;
   left: 0;
@@ -182,12 +199,12 @@ img {
 .modal {
   max-width: calc(100vw - 48px);
   max-height: calc(100vh - 24px);
-}
+} */
 
 /*
 * Стили компонента Buton (Load more)
 */
-.button {
+/* .button {
   padding: 8px 16px;
   border-radius: 2px;
   background-color: #3f51b5;
@@ -211,4 +228,4 @@ img {
 .button:hover,
 .button:focus {
   background-color: #303f9f;
-}
+} */
