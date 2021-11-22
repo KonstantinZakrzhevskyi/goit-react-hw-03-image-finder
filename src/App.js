@@ -20,12 +20,11 @@ class App extends Component {
   render() {
     const { query } = this.state;
     return (
-      <>
-        <Container />
+      <Container>
         <Searchbar onSubmit={this.onSubmit} />
         <ImageGallery query={query} />
         <ToastContainer autoClose={3000} />
-      </>
+      </Container>
     );
   }
 }
